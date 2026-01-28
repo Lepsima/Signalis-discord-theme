@@ -1,1 +1,1 @@
-# Custom theme that recreates the signalis UI
+Custom theme that recreates the signalis UI
