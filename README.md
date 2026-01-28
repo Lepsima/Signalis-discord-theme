@@ -1,1 +1,1 @@
-# My-Discord-Themes
+# Custom theme that recreates the signalis UI
