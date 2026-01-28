@@ -9,4 +9,4 @@ https://github.com/refact0r/system24
 
 Comment this line to re-enable nitro things
 
-<img width="183" height="122" alt="image" src="https://github.com/user-attachments/assets/b81487d3-dd35-4df2-a922-7c16c9c42cac" />
+<img width="306" height="117" alt="image" src="https://github.com/user-attachments/assets/996c6e09-b2ef-45fe-8300-fc8a908c34e7" />
