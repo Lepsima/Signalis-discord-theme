@@ -2831,15 +2831,15 @@ html::before {
 }
 
 body {
-    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-url: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo.svg');
     /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 100%;
+    --dms-icon-svg-size: 140%;
     /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: #000;
+    --dms-icon-color-before: var(--icon-subtle);
     /* normal icon color */
     --dms-icon-color-after: var(--white);
     /* icon color when button is hovered/selected */
-    --dms-background-image-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-background-image-url: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo.svg');
     /* url of the background image */
     --dms-background-image-size: cover;
     /* size of the background image (css background-size property) */
@@ -2857,7 +2857,7 @@ body {
     position: absolute;
     width: 65%;
     height: 65%;
-    background: var(--dms-icon-color-before);
+    background: #000;
     mask-image: var(--dms-icon-svg-url);
     mask-size: var(--dms-icon-svg-size);
     mask-position: center;
@@ -2871,7 +2871,7 @@ body {
 
 .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover>.childWrapper__6e9f8::before,
 .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8>.childWrapper__6e9f8::before {
-    background: var(--dms-icon-color-after);
+    background: #000;
     transform: rotate(-360deg) scale(0.8);
 }
 
