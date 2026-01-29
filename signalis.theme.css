@@ -2795,38 +2795,13 @@ html::before {
 
 @keyframes glitch{
   2%,64%{
-    transform: translate(1px,0) skew(0deg);
+    transform: translate(1px,0) skew(-0.2deg);
   }
   4%,60%{
     transform: translate(-1px,0) skew(0deg);
   }
   62%{
     transform: translate(0,0) skew(0.5deg); 
-  }
-}
-
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-1px,0);
-  }
-  62%{
-    transform: translate(-21px,5px) skew(20deg); 
-  }
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-    filter: saturate(200%);
-  }
-  62%{
-    transform: translate(7px,-1px) skew(-6deg); 
   }
 }
 
