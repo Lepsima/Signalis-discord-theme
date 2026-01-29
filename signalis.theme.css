@@ -28,7 +28,7 @@
 
 :root {
     container-name: root;
-    --custom-guild-list-padding: 12px;
+    --custom-guild-list-padding: 25px;
     --panel-backdrop-filter: none;
 
     --border-hover: var(--border-subtle);
@@ -2625,16 +2625,16 @@ body::before {
 }
 
 html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
 
     box-shadow:
-        inset 0 0 12rem rgb(0, 0, 0),
+        inset 0 0 8rem rgb(0, 0, 0),
         inset 0 0 2rem rgb(0, 0, 0),
-        0 0 7rem rgb(0, 0, 0);
+        0 0 5rem rgb(0, 0, 0);
 }
 
 @keyframes crt-flicker {
@@ -2828,4 +2828,60 @@ html::before {
   62%{
     transform: translate(7px,-1px) skew(-6deg); 
   }
+}
+
+body {
+    --dms-icon-svg-url: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo.svg');
+    /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 110%;
+    /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: #fff;
+    /* normal icon color */
+    --dms-icon-color-after: red;
+    /* icon color when button is hovered/selected */
+    --dms-background-image-url: url('');
+    /* url of the background image */
+    --dms-background-image-size: cover;
+    /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+    /* fixed color/gradient (css background property) */
+}
+
+.selected__6e9f8>.childWrapper__6e9f8>svg {
+    display: none;
+    color: white;
+}
+
+
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8>svg>path {
+    fill: #0000;
+    
+}
+
+.tutorialContainer__1f388 > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1), .selected__91816 > div:nth-child(1) > svg:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    margin: -16px;
+}
+
+#guild-list-unread-dms {
+    margin-top: 10px;
+}
+
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8, .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:hover, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+    background: black;
+}
+
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8::before, .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:hover::before, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    mask-image: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo.svg');
+    mask-size: var(--dms-icon-svg-size);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    transition: background-color 0.15s ease-out;
 }
