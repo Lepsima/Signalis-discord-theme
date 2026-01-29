@@ -2265,8 +2265,9 @@ body {
         .callContainer_cb9592 {
             &::after {
                 display: block;
-                color: var(--label-color);
-                font-weight: var(--label-font-weight);
+                color: var(--active);
+                text-shadow: none;
+                font-weight: bold;
                 position: absolute;
                 top: -10px;
                 left: 8px;
@@ -2284,6 +2285,7 @@ body {
 
         .guilds__5e434::after {
             content: 'nav';
+            
         }
 
         .panels__5e434::after {
@@ -2617,17 +2619,18 @@ body {
     
     /* font weight of labels */
     background-color: rgb(25, 25, 30);
-    text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5),
-    -1px -1px rgba(0, 255, 255, 0.4);
+    text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5), -1px -1px rgba(0, 255, 255, 0.4);
     position: relative;
+    filter: blur(0.25px) sepia(10%) saturate(120%) opacity(95%) grayscale(2%);
+    animation: glitch 4s linear infinite;
 }
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-
 
   background:
     repeating-linear-gradient(
@@ -2647,55 +2650,16 @@ html::before {
   pointer-events: none;
   z-index: 9999;
 
-  background:
-    radial-gradient(circle at top left,
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.35) 95%,
-      rgba(0,0,0,0.65) 100%
-    ),
-    radial-gradient(circle at top right,
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.35) 95%,
-      rgba(0,0,0,0.65) 100%
-    ),
-    radial-gradient(circle at bottom left,
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.35) 95%,
-      rgba(0,0,0,0.65) 100%
-    ),
-    radial-gradient(circle at bottom right,
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.35) 95%,
-      rgba(0,0,0,0.65) 100%
-    ),
-
-    linear-gradient(to top,
-      rgba(0,0,0,0.3),
-      rgba(0,0,0,0) 5%
-    ),
-    linear-gradient(to bottom,
-      rgba(0,0,0,0.3),
-      rgba(0,0,0,0) 5%
-    ),
-    linear-gradient(to left,
-      rgba(0,0,0,0.3),
-      rgba(0,0,0,0) 5%
-    ),
-    linear-gradient(to right,
-      rgba(0,0,0,0.3),
-      rgba(0,0,0,0) 5%
-    );
+    box-shadow:
+        inset 0 0 12rem rgb(0, 0, 0),
+        inset 0 0 2rem rgb(0, 0, 0),
+        0 0 7rem rgb(0, 0, 0);
 }
 
 @keyframes crt-flicker {
   0%   { opacity: 0.5; }
   50%  { opacity: 0.8; }
   100% { opacity: 0.5; }
-}
-
-body {
-  filter: blur(0.25px) sepia(10%) saturate(120%) opacity(95%) grayscale(2%);
-  animation: glitch 4s linear infinite;
 }
 
 /* color options */
@@ -2714,7 +2678,7 @@ body {
     /* normal text */
     --text-4: oklch(60% 0 0);
     /* icon buttons and channels */
-    --text-5: oklch(40% 0 0);
+    --text-5: oklch(50% 0 0);
     /* muted channels/chats and timestamps */
 
     /* background and dark colors */
@@ -2840,7 +2804,6 @@ body {
 [class^="repliedMessage_"]>.username_c19a55,
 .member__5d473 .username_d272d6 {
     background: linear-gradient(270deg, #0000, color-mix(in srgb, currentColor 30%, #000a));
-    border: px dashed;
     font-weight: normal;
     margin-right: 4px;
     padding: 2px 5px;
