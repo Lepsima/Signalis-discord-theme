@@ -2831,7 +2831,7 @@ html::before {
 }
 
 body {
-    --dms-icon-svg-url: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo.svg');
+    --dms-icon-svg-url: url('https://lepsima.github.io/Signalis-discord-theme/assets/logo_black.svg');
     /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 200%;
     /* size of the svg (css mask-size property) */
