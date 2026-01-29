@@ -885,20 +885,6 @@ body {
     --background-image-url: url('');
 }
 
-@property --background-image {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--background-image: on) {
-    #app-mount .bg__960e4 {
-        background: var(--background-image-url);
-        background-size: cover;
-        background-position: center;
-    }
-}
-
 /* chatbar.css */
 body {
     --chatbar-height: 47px;
@@ -1033,113 +1019,6 @@ body {
     initial-value: on;
 }
 
-:root {
-    /* text colors */
-    --text-0: var(--bg-4);
-    /* text on colored elements */
-    --text-1: hsl(220, 45%, 95%);
-    /* other normally white text */
-    --text-2: hsl(220, 25%, 70%);
-    /* headings and important text */
-    --text-3: hsl(220, 20%, 60%);
-    /* normal text */
-    --text-4: hsl(220, 15%, 40%);
-    /* icon buttons and channels */
-    --text-5: hsl(220, 15%, 25%);
-    /* muted channels/chats and timestamps */
-
-    /* background and dark colors */
-    --bg-1: hsl(220, 15%, 20%);
-    /* dark buttons when clicked */
-    --bg-2: hsl(220, 15%, 16%);
-    /* dark buttons */
-    --bg-3: hsl(220, 15%, 13%);
-    /* spacing, secondary elements */
-    --bg-4: hsl(220, 15%, 10%);
-    /* main background color */
-    --hover: hsla(221, 19%, 40%, 0.1);
-    /* channels and buttons when hovered */
-    --active: hsla(220, 19%, 40%, 0.2);
-    /* channels and buttons when clicked or selected */
-    --active-2: hsla(220, 19%, 40%, 0.3);
-    /* extra state for transparent buttons */
-    --message-hover: hsla(230, 0%, 0%, 0.1);
-    /* messages when hovered */
-
-    /* accent colors */
-    --accent-1: var(--blue-1);
-    /* links and other accent text */
-    --accent-2: var(--blue-2);
-    /* small accent elements */
-    --accent-3: var(--blue-3);
-    /* accent buttons */
-    --accent-4: var(--blue-4);
-    /* accent buttons when hovered */
-    --accent-5: var(--blue-5);
-    /* accent buttons when clicked */
-    --accent-new: var(--blue-2);
-    /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent);
-    /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent);
-    /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
-    /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
-    /* background of messages that reply to you when hovered */
-
-    /* status indicator colors */
-    --online: var(--green-2);
-    /* change to #43a25a for default */
-    --dnd: var(--red-2);
-    /* change to #d83a42 for default */
-    --idle: var(--yellow-2);
-    /* change to #ca9654 for default */
-    --streaming: var(--purple-2);
-    /* change to ##9147ff for default */
-    --offline: var(--text-4);
-    /* change to #83838b for default offline color */
-
-    /* border colors */
-    --border-light: hsl(230, 20%, 40%, 0.1);
-    /* light border color */
-    --border: hsl(230, 20%, 40%, 0.2);
-    /* normal border color */
-    --button-border: hsl(0, 0%, 100%, 0.1);
-    /* neutral border color of buttons */
-
-    /* base colors */
-    --red-1: oklch(76% 0.12 0);
-    --red-2: oklch(70% 0.12 0);
-    --red-3: oklch(64% 0.12 0);
-    --red-4: oklch(58% 0.12 0);
-    --red-5: oklch(52% 0.12 0);
-
-    --green-1: oklch(76% 0.11 170);
-    --green-2: oklch(70% 0.11 170);
-    --green-3: oklch(64% 0.11 170);
-    --green-4: oklch(58% 0.11 170);
-    --green-5: oklch(52% 0.11 160);
-
-    --blue-1: oklch(76% 0.1 215);
-    --blue-2: oklch(70% 0.1 215);
-    --blue-3: oklch(64% 0.1 215);
-    --blue-4: oklch(58% 0.1 215);
-    --blue-5: oklch(52% 0.1 215);
-
-    --yellow-1: oklch(80% 0.11 90);
-    --yellow-2: oklch(74% 0.11 90);
-    --yellow-3: oklch(68% 0.11 90);
-    --yellow-4: oklch(62% 0.11 90);
-    --yellow-5: oklch(56% 0.11 90);
-
-    --purple-1: oklch(76% 0.11 310);
-    --purple-2: oklch(70% 0.11 310);
-    --purple-3: oklch(64% 0.11 310);
-    --purple-4: oklch(58% 0.11 310);
-    --purple-5: oklch(52% 0.11 310);
-}
-
 @container root style(--colors: on) {
 
     body,
@@ -1171,8 +1050,6 @@ body {
         --background-surface-high: var(--bg-3);
         --background-surface-higher: var(--bg-3);
         --background-surface-highest: var(--bg-3);
-        /* --background-tile-gradient-pink-end: yellow;
-        --background-tile-gradient-pink-start: lime; */
         --badge-background-default: var(--accent-2);
         --badge-expressive-background-default: magenta;
         --badge-expressive-text-default: red;
@@ -1379,34 +1256,6 @@ body {
         --embed-background: magenta;
         --embed-background-alternate: red;
         --experimental-avatar-embed-bg: yellow;
-        /* --expressive-gradient-blue-end: lime;
-        --expressive-gradient-blue-start: blue;
-        --expressive-gradient-green-end: magenta;
-        --expressive-gradient-green-start: red;
-        --expressive-gradient-nitro-green-end: yellow;
-        --expressive-gradient-nitro-green-start: lime;
-        --expressive-gradient-nitro-pink-end: blue;
-        --expressive-gradient-nitro-pink-start: magenta;
-        --expressive-gradient-pink-end: red;
-        --expressive-gradient-pink-start: yellow;
-        --expressive-gradient-purple-end: lime;
-        --expressive-gradient-purple-start: blue;
-        --expressive-gradient-tenure-badge-bronze-end: magenta;
-        --expressive-gradient-tenure-badge-bronze-start: red;
-        --expressive-gradient-tenure-badge-diamond-end: yellow;
-        --expressive-gradient-tenure-badge-diamond-start: lime;
-        --expressive-gradient-tenure-badge-emerald-end: blue;
-        --expressive-gradient-tenure-badge-emerald-start: magenta;
-        --expressive-gradient-tenure-badge-gold-end: red;
-        --expressive-gradient-tenure-badge-gold-start: yellow;
-        --expressive-gradient-tenure-badge-opal-end: lime;
-        --expressive-gradient-tenure-badge-opal-start: blue;
-        --expressive-gradient-tenure-badge-platinum-end: magenta;
-        --expressive-gradient-tenure-badge-platinum-start: red;
-        --expressive-gradient-tenure-badge-ruby-end: yellow;
-        --expressive-gradient-tenure-badge-ruby-start: lime;
-        --expressive-gradient-tenure-badge-silver-end: blue;
-        --expressive-gradient-tenure-badge-silver-start: magenta; */
         --gradient-progress-pill-background: var(--text-5);
         --home-background: var(--bg-4);
         --icon-default: lime;
@@ -2275,105 +2124,13 @@ body {
     }
 }
 
-/* dms-button.css */
-body {
-    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
-    /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%;
-    /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-subtle);
-    /* normal icon color */
-    --dms-icon-color-after: var(--white);
-    /* icon color when button is hovered/selected */
-    --dms-background-image-url: url('');
-    /* url of the background image */
-    --dms-background-image-size: cover;
-    /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
-    /* fixed color/gradient (css background property) */
+.wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8 {
+    color: var(--dms-icon-color-before);
 }
 
-@property --custom-dms-icon {
-    syntax: 'off | hide | custom';
-    inherits: false;
-    initial-value: custom;
-}
-
-@container body style(--custom-dms-icon: off) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8 {
-        color: var(--dms-icon-color-before);
-    }
-
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover>.childWrapper__6e9f8,
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8>.childWrapper__6e9f8 {
-        color: var(--dms-icon-color-after);
-    }
-}
-
-@container body style(--custom-dms-icon: custom) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8>svg {
-        display: none;
-    }
-
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 65%;
-        height: 65%;
-        background: var(--dms-icon-color-before);
-        mask-image: var(--dms-icon-svg-url);
-        mask-size: var(--dms-icon-svg-size);
-        mask-position: center;
-        mask-repeat: no-repeat;
-        transition: background-color 0.15s ease-out;
-    }
-
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover>.childWrapper__6e9f8::before {
-        transform: rotate(0deg) scale(1);
-    }
-
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover>.childWrapper__6e9f8::before,
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8>.childWrapper__6e9f8::before {
-        background: var(--dms-icon-color-after);
-        transform: rotate(-360deg) scale(0.8);
-    }
-
-    @container body style(--animations: on) {
-        .wrapper__6e9f8[data-list-item-id='guildsnav___home'] .childWrapper__6e9f8::before {
-            transition:
-                background-color 0.15s ease-out,
-                transform var(--dms-icon-svg-transition);
-        }
-    }
-}
-
-@container body style(--custom-dms-icon: hide) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8>svg {
-        display: none;
-    }
-}
-
-@property --custom-dms-background {
-    syntax: 'off | image | color';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--custom-dms-background: image) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8 {
-        background-image: var(--dms-background-image-url);
-        background-color: transparent !important;
-        background-size: var(--dms-background-image-size);
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-@container body style(--custom-dms-background: color) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']>.childWrapper__6e9f8 {
-        background: var(--dms-background-color);
-    }
+.wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover>.childWrapper__6e9f8,
+.wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8>.childWrapper__6e9f8 {
+    color: var(--dms-icon-color-after);
 }
 
 /* top-bar.css */
@@ -2382,328 +2139,14 @@ body {
     --custom-app-top-bar-height: var(--top-bar-height);
 }
 
-@property --top-bar-button-position {
-    syntax: 'off | hide | serverlist | titlebar';
-    inherits: false;
-    initial-value: titlebar;
-}
-
 .platform-osx .wrapper_ef3116 {
     margin-top: max(0px, calc(36px - var(--top-bar-height)));
 }
 
-@container body style(--top-bar-button-position: hide) {
-
-    .trailing_c38106>a[href='https://support.discord.com'],
-    .recentsIcon_c99c29,
-    .winButtons_c38106::before {
-        display: none;
-    }
-}
-
-@container body style(--top-bar-button-position: serverlist) {
-
-    /* remove help button */
-    .trailing_c38106>a[href='https://support.discord.com'],
-    .winButtons_c38106::before {
-        display: none;
-    }
-
-    /* make server list inner scroll */
-    .stack_dbd263:not([id='guild-list-unread-dms']) {
-        overflow: hidden scroll;
-        scrollbar-width: none;
-    }
-
-    /* create space for inbox button */
-    .tutorialContainer__1f388 {
-        margin-bottom: 48px;
-    }
-
-    /* move inbox button */
-    .recentsIcon_c99c29 {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
-        left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
-    }
-
-    /* style inbox button */
-    .recentsIcon_c99c29 .button__85643 {
-        width: 100%;
-        height: 100%;
-        background-color: var(--background-surface-higher);
-        border-radius: var(--radius-md);
-        transition: background-color 0.15s ease-out;
-
-        &:hover {
-            background-color: var(--bg-brand);
-
-            .icon__9293f {
-                color: var(--white);
-            }
-        }
-    }
-
-    .recentsIcon_c99c29 .svg__2338f {
-        transition: color 0.15s ease-out;
-        width: 24px;
-        height: 24px;
-    }
-
-    /* shift inbox popup panel into view */
-    .recentMentionsPopout__95796 {
-        transform: translateX(100%);
-    }
-
-    /* fix settings animation transform */
-    .layer__960e4.baseLayer__960e4 {
-        transform: none !important;
-    }
-
-    .layers__960e4>.layer__960e4.animating__960e4 {
-        will-change: opacity;
-    }
-
-    /* unread icon */
-    .recentsIcon_c99c29 .iconBadge__9293f {
-        --custom-icon-offset: 8px;
-        width: 10px;
-        height: 10px;
-        transition: background 0.15s ease-out;
-    }
-
-    .recentsIcon_c99c29:hover .iconBadge__9293f {
-        background: var(--white);
-    }
-}
-
-@container body style(--top-bar-button-position: titlebar) {
-    #app-mount {
-        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
-        /* --top-bar-right-margin: calc(32px + var(--space-xs)); */
-        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
-    }
-
-    .title_c38106,
-    .trailing_c38106>a[href='https://support.discord.com'] {
-        display: none;
-    }
-
-    .trailing_c38106 {
-        position: absolute;
-        top: calc(var(--top-bar-height) + 8px + var(--border-thickness));
-        right: calc(var(--gap) + var(--border-thickness));
-        gap: var(--space-xs);
-        z-index: 1000;
-        padding-right: var(--space-xs);
-        height: 32px;
-    }
-
-    .systemBar_c38106 .trailing_c38106 {
-        top: var(--space-xs);
-    }
-
-    .winButtons_c38106 {
-        padding: 0;
-    }
-
-    .winButton_c38106 {
-        height: calc(var(--window-control-size) * 2);
-    }
-
-    .winButtons_c38106::before {
-        height: 16px;
-        width: var(--space-xs);
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    .toolbar__9293f {
-        padding-right: var(--top-bar-right-margin);
-    }
-
-    .navBarContent__88ef1,
-    .headerBarContent__1a9ce {
-        padding-right: var(--top-bar-right-margin);
-    }
-
-    .headerBar__8a7fc {
-        padding-right: calc(var(--top-bar-right-margin) + var(--space-sm));
-    }
-
-    .searchFloating__1ac1c {
-        right: calc(var(--top-bar-right-margin) + var(--space-sm));
-    }
-
-    .balanceWidgetMenu__80679 {
-        margin-right: var(--top-bar-right-margin);
-    }
-
-    .inviteToolbar__133bf {
-        padding-right: 0;
-    }
-
-    .chat_f75fb0>.layerContainer__59d0d {
-        z-index: 999;
-    }
-
-    .subtitleContainer_f75fb0 {
-        height: var(--custom-channel-header-height);
-    }
-
-    .title_f75fb0.container__9293f {
-        min-height: 0;
-        height: auto;
-    }
-
-    .followButton_f75fb0 {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .base__5e434:has(.notice__6e2b9)>.bar_c38106>.trailing_c38106 {
-        top: calc(var(--top-bar-height) + 8px + 40px + var(--gap) + var(--border-thickness));
-    }
-
-    /* .base__5e434:has(.winButtons_c38106) {
-        --top-bar-right-margin: calc(32px + 3 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    }
-    .base__5e434:has(.trailing_c38106 > .button__85643) {
-        --top-bar-right-margin: calc(32px * 2 + 2 * var(--space-xs));
-    }
-    .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643) {
-        --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    } */
-    .base__5e434:has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
-        --top-bar-right-margin: calc(32px * 3 + 3 * var(--space-xs));
-    }
-
-    .base__5e434:has(.winButtons_c38106) {
-        --top-bar-right-margin: calc(32px * 2 + 5 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    }
-
-    .base__5e434:has(.winButtons_c38106):has(.trailing_c38106 > .button__85643:nth-of-type(3)) {
-        --top-bar-right-margin: calc(32px * 3 + 6 * var(--space-xs) + 6 * var(--window-control-size) + 1px);
-    }
-}
-
-@property --top-bar-title-position {
-    syntax: 'off | hide | left';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--top-bar-title-position: hide) {
-    .title__85643 {
-        display: none;
-    }
-}
-
-@container body style(--top-bar-title-position: left) {
-    .title_c38106 {
-        padding-left: var(--gap);
-        justify-content: flex-start;
-    }
-
-    .title__85643 {
-        gap: 4px;
-    }
-}
-
-@property --subtle-top-bar-title {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--subtle-top-bar-title: on) {
-
-    .title__85643 .icon_f34534,
-    .title__85643>svg {
-        display: none;
-    }
-
-    .title__85643 .text-sm\/medium_cf4812 {
-        line-height: 90%;
-        font-weight: 700;
-        color: var(--text-muted);
-    }
-}
-
-/* transparency-blur.css */
-@property --panel-blur {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--panel-blur: on) {
-    #app-mount {
-        --panel-backdrop-filter: blur(var(--blur-amount));
-    }
-
-    .popoverReactionHoverBar_f84418
-    /* message hover quick action bar */
-    ,
-    .tooltip_c36707
-
-    /* tooltips */
-        {
-        background: var(--bg-floating);
-    }
-
-    .menu_c1e9c4
-    /* context menus */
-    ,
-    .contentWrapper__08434
-    /* emoji/gif panel */
-    ,
-    .root__49fc1
-    /* modals like invite */
-    ,
-    .outer_c0bea0.user-profile-popout:not(.custom-theme-background)
-    /* small profile popup */
-    ,
-    .autocomplete__6b0e0
-    /* autocomplete */
-    ,
-    .container__55c99
-    /* search suggestions */
-    ,
-    .messagesPopoutWrap_e8b59c
-    /* inbox */
-    ,
-    .popout__76f04
-    /* channel hover popout */
-    ,
-    .bar__7aaec
-
-    /* channel list new unreads bar */
-        {
-        background: var(--bg-floating);
-    }
-}
-
-@property --transparency-tweaks {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: off;
-}
-
-@container body style(--transparency-tweaks: on) {
-    .children__9293f:after {
-        display: none;
-    }
-
-    .chatGradient__36d07 {
-        display: none;
-    }
-
-    .form_f75fb0 {
-        margin-top: 0;
-    }
+.trailing_c38106>a[href='https://support.discord.com'],
+.recentsIcon_c99c29,
+.winButtons_c38106::before {
+    display: none;
 }
 
 @property --remove-bg-layer {
@@ -2748,280 +2191,13 @@ body {
     --window-control-size: 14px;
 }
 
-@property --custom-window-controls {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: on;
+.winButton_c38106 {
+    width: calc(var(--window-control-size) * 2);
+    height: calc(var(--window-control-size) * 2);
 }
 
-@container body style(--custom-window-controls: on) {
-    .winButtons_c38106 {
-        gap: 0;
-        padding-right: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
-    }
-
-    .winButtons_c38106::before {
-        margin-right: calc(var(--custom-app-top-bar-height) / 4);
-    }
-
-    .winButton_c38106>svg {
-        display: none;
-    }
-
-    .winButton_c38106 {
-        background: none !important;
-        width: calc(var(--window-control-size) * 2);
-        height: var(--custom-app-top-bar-height);
-    }
-
-    .winButton_c38106::after {
-        display: block;
-        content: '';
-        height: var(--window-control-size);
-        width: var(--window-control-size);
-        border-radius: 50%;
-    }
-
-    .winButton_c38106:hover::after {
-        filter: brightness(0.7);
-    }
-
-    .winButton_c38106:active::after {
-        transform: scale(0.9);
-    }
-}
-
-@container body style(--custom-window-controls: off) and style(--top-bar-button-position: titlebar) {
-    .winButton_c38106 {
-        width: calc(var(--window-control-size) * 2);
-        height: calc(var(--window-control-size) * 2);
-    }
-
-    .winButtons_c38106 {
-        gap: 0;
-    }
-}
-
-body {
-    /* font, change to '' for default discord font */
-    --font: 'DM Mono';
-    /* change to '' for default discord font */
-    --code-font: 'DM Mono';
-    /* change to '' for default discord font */
-    font-weight: 300;
-    /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
-    letter-spacing: -0.05ch;
-    /* decreases letter spacing for better readability. recommended on monospace fonts.*/
-
-    /* sizes */
-    --gap: 12px;
-    /* spacing between panels */
-    --divider-thickness: 4px;
-    /* thickness of unread messages divider and highlighted message borders */
-    --border-thickness: 2px;
-    /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
-    --border-hover-transition: 0.2s ease;
-    /* transition for borders when hovered */
-
-    /* animation/transition options */
-    --animations: on;
-    /* off: disable animations/transitions, on: enable animations/transitions */
-    --list-item-transition: 0.2s ease;
-    /* transition for list items */
-    --dms-icon-svg-transition: 0.4s ease;
-    /* transition for the dms icon */
-
-    /* top bar options */
-    --top-bar-height: var(--gap);
-    /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
-    --top-bar-button-position: titlebar;
-    /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
-    --top-bar-title-position: off;
-    /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
-    --subtle-top-bar-title: off;
-    /* off: default, on: hide the icon and use subtle text color (like old discord) */
-
-    /* window controls */
-    --custom-window-controls: off;
-    /* off: default window controls, on: custom window controls */
-    --window-control-size: 14px;
-    /* size of custom window controls */
-
-    /* dms button options */
-    --custom-dms-icon: off;
-    /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-    --dms-icon-svg-url: url('');
-    /* icon svg url. MUST BE A SVG. */
-    --dms-icon-svg-size: 90%;
-    /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-subtle);
-    /* normal icon color */
-    --dms-icon-color-after: var(--white);
-    /* icon color when button is hovered/selected */
-    --custom-dms-background: off;
-    /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url('');
-    /* url of the background image */
-    --dms-background-image-size: cover;
-    /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
-    /* fixed color/gradient (css background property) */
-
-    /* background image options */
-    --background-image: off;
-    /* off: no background image, on: enable background image (must set url variable below) */
-    --background-image-url: url('');
-    /* url of the background image */
-
-    /* transparency/blur options */
-    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-    --transparency-tweaks: off;
-    /* off: no changes, on: remove some elements for better transparency */
-    --remove-bg-layer: off;
-    /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-    --panel-blur: off;
-    /* off: no changes, on: blur the background of panels */
-    --blur-amount: 12px;
-    /* amount of blur */
-    --bg-floating: var(--bg-3);
-    /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
-
-    /* other options */
-    --small-user-panel: on;
-    /* off: default user panel, on: smaller user panel like in old discord */
-
-    /* unrounding options */
-    --unrounding: on;
-    /* off: default, on: remove rounded corners from panels */
-
-    /* styling options */
-    --custom-spotify-bar: on;
-    /* off: default, on: custom text-like spotify progress bar */
-    --ascii-titles: on;
-    /* off: default, on: use ascii font for titles at the start of a channel */
-    --ascii-loader: system24;
-    /* off: default, system24: use system24 ascii loader, cats: use cats loader */
-
-    /* panel labels */
-    --panel-labels: on;
-    /* off: default, on: add labels to panels */
-    --label-color: var(--text-muted);
-    /* color of labels */
-    --label-font-weight: 500;
-    /* font weight of labels */
-}
-
-/* color options */
-:root {
-    --colors: on;
-    /* off: discord default colors, on: midnight custom colors */
-
-    /* text colors */
-    --text-0: var(--bg-4);
-    /* text on colored elements */
-    --text-1: oklch(95% 0 0);
-    /* other normally white text */
-    --text-2: oklch(85% 0 0);
-    /* headings and important text */
-    --text-3: oklch(75% 0 0);
-    /* normal text */
-    --text-4: oklch(60% 0 0);
-    /* icon buttons and channels */
-    --text-5: oklch(40% 0 0);
-    /* muted channels/chats and timestamps */
-
-    /* background and dark colors */
-    --bg-1: oklch(31% 0 0);
-    /* dark buttons when clicked */
-    --bg-2: oklch(27% 0 0);
-    /* dark buttons */
-    --bg-3: oklch(23% 0 0);
-    /* spacing, secondary elements */
-    --bg-4: oklch(19% 0 0);
-    /* main background color */
-    --hover: oklch(54% 0 0 / 0.1);
-    /* channels and buttons when hovered */
-    --active: oklch(54% 0 0 / 0.2);
-    /* channels and buttons when clicked or selected */
-    --active-2: oklch(54% 0 0 / 0.3);
-    /* extra state for transparent buttons */
-    --message-hover: var(--hover);
-    /* messages when hovered */
-
-    /* accent colors */
-    --accent-1: var(--purple-1);
-    /* links and other accent text */
-    --accent-2: var(--purple-2);
-    /* small accent elements */
-    --accent-3: var(--purple-3);
-    /* accent buttons */
-    --accent-4: var(--purple-4);
-    /* accent buttons when hovered */
-    --accent-5: var(--purple-5);
-    /* accent buttons when clicked */
-    --accent-new: var(--red-2);
-    /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
-    /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
-    /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
-    /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
-    /* background of messages that reply to you when hovered */
-
-    /* status indicator colors */
-    --online: var(--green-2);
-    /* change to #40a258 for default */
-    --dnd: var(--red-2);
-    /* change to #d83a41 for default */
-    --idle: var(--yellow-2);
-    /* change to #cc954c for default */
-    --streaming: var(--purple-2);
-    /* change to ##9147ff for default */
-    --offline: var(--text-4);
-    /* change to #82838b for default offline color */
-
-    /* border colors */
-    --border-light: var(--hover);
-    /* general light border color */
-    --border: var(--active);
-    /* general normal border color */
-    --border-hover: var(--accent-2);
-    /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1);
-    /* neutral border color of buttons */
-
-    /* base colors */
-    --red-1: oklch(75% 0.13 0);
-    --red-2: oklch(70% 0.13 0);
-    --red-3: oklch(65% 0.13 0);
-    --red-4: oklch(60% 0.13 0);
-    --red-5: oklch(55% 0.13 0);
-
-    --green-1: oklch(75% 0.12 170);
-    --green-2: oklch(70% 0.12 170);
-    --green-3: oklch(65% 0.12 170);
-    --green-4: oklch(60% 0.12 170);
-    --green-5: oklch(55% 0.12 160);
-
-    --blue-1: oklch(75% 0.11 215);
-    --blue-2: oklch(70% 0.11 215);
-    --blue-3: oklch(65% 0.11 215);
-    --blue-4: oklch(60% 0.11 215);
-    --blue-5: oklch(55% 0.11 215);
-
-    --yellow-1: oklch(80% 0.12 90);
-    --yellow-2: oklch(75% 0.12 90);
-    --yellow-3: oklch(70% 0.12 90);
-    --yellow-4: oklch(65% 0.12 90);
-    --yellow-5: oklch(60% 0.12 90);
-
-    --purple-1: oklch(75% 0.12 310);
-    --purple-2: oklch(70% 0.12 310);
-    --purple-3: oklch(65% 0.12 310);
-    --purple-4: oklch(60% 0.12 310);
-    --purple-5: oklch(55% 0.12 310);
+.winButtons_c38106 {
+    gap: 0;
 }
 
 body {
@@ -3042,99 +2218,6 @@ body {
 
     .container__37e49 {
         padding: 8px;
-    }
-}
-
-/* ascii.css */
-@property --ascii-titles {
-    syntax: 'off | on';
-    inherits: false;
-    initial-value: on;
-}
-
-@container body style(--ascii-titles: on) {
-    h3[data-text-variant='heading-xxl/extrabold'] {
-        font-family: 'asciid';
-        font-size: 50px;
-        font-weight: 400;
-    }
-}
-
-@property --ascii-loader {
-    syntax: 'off | system24 | cats';
-    inherits: false;
-    initial-value: system24;
-}
-
-@container body style(--ascii-loader: system24) {
-    .content_a2f514 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .content_a2f514>.spinner_a2f514 {
-        display: none;
-    }
-
-    .content_a2f514::before {
-        display: block;
-        content: '                    __                ___  __ __\A    _______  _______/ /____  ____ ___ |__ \\/ // /\A   / ___/ / / / ___/ __/ _ \\/ __ `__ \\__/ / // /_\A  (__  ) /_/ (__  ) /_/  __/ / / / / / __/__  __/\A/____/\\__, /____/\\__/\\___/_/ /_/ /_/____/ /_/   \A      /____/                                     ';
-        font-size: 18px;
-        font-family: monospace;
-        white-space: pre;
-        line-height: 1.2;
-        background: linear-gradient(to right, var(--brand-360) 0%, var(--background-accent) 25%, var(--background-accent) 75%, var(--brand-360) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% auto;
-        animation: textShine 1.5s linear infinite reverse;
-    }
-
-    .text_a2f514 {
-        position: static;
-    }
-
-    @keyframes textShine {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        50.0001% {
-            background-position: -100%, 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-}
-
-@container body style(--ascii-loader: cats) {
-    .content_a2f514 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        position: static;
-    }
-
-    .content_a2f514>.spinner_a2f514 {
-        display: none;
-    }
-
-    .content_a2f514::before {
-        display: block;
-        content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');
-    }
-
-    .text_a2f514 {
-        position: static;
     }
 }
 
@@ -3565,7 +2648,6 @@ html::before {
   z-index: 9999;
 
   background:
-    /* esquinas (más fuertes) */
     radial-gradient(circle at top left,
       rgba(0,0,0,0) 80%,
       rgba(0,0,0,0.35) 95%,
@@ -3587,7 +2669,6 @@ html::before {
       rgba(0,0,0,0.65) 100%
     ),
 
-    /* bordes (mucho más finos) */
     linear-gradient(to top,
       rgba(0,0,0,0.3),
       rgba(0,0,0,0) 5%
@@ -3608,13 +2689,13 @@ html::before {
 
 @keyframes crt-flicker {
   0%   { opacity: 0.5; }
-  50%  { opacity: 1; }
+  50%  { opacity: 0.8; }
   100% { opacity: 0.5; }
 }
 
 body {
-  filter: blur(0.5px) sepia(10%) saturate(120%) opacity(95%) grayscale(2%);
-  /*animation: glitch 4s linear infinite;*/
+  filter: blur(0.25px) sepia(10%) saturate(120%) opacity(95%) grayscale(2%);
+  animation: glitch 4s linear infinite;
 }
 
 /* color options */
@@ -3637,13 +2718,13 @@ body {
     /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: oklch(31% 0 0);
+    --bg-1: oklch(27% 0 0);
     /* dark buttons when clicked */
-    --bg-2: oklch(27% 0 0);
+    --bg-2: oklch(24% 0 0);
     /* dark buttons */
-    --bg-3: oklch(23% 0 0);
+    --bg-3: oklch(20% 0 0);
     /* spacing, secondary elements */
-    --bg-4: oklch(19% 0 0);
+    --bg-4: oklch(15% 0 0);
     /* main background color */
     --hover: oklch(54% 0 0 / 0.1);
     /* channels and buttons when hovered */
@@ -3771,15 +2852,12 @@ body {
 @keyframes glitch{
   2%,64%{
     transform: translate(1px,0) skew(0deg);
-    filter: saturate(200%);
   }
   4%,60%{
     transform: translate(-1px,0) skew(0deg);
-    filter: saturate(100%);
   }
   62%{
-    transform: translate(0,0) skew(1deg); 
-     filter: saturate(200%);
+    transform: translate(0,0) skew(0.5deg); 
   }
 }
 
