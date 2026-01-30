@@ -2822,11 +2822,15 @@ html::before {
     margin-top: 10px;
 }
 
-.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8, .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:hover, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:not(.acronym__6e9f8), 
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:not(.acronym__6e9f8):hover,
+ .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8:not(.acronym__6e9f8) {
     background: #0000;
 }
 
-.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8::before, .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:hover::before, .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8::before {
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:not(.acronym__6e9f8)::before, 
+.childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:not(.acronym__6e9f8):hover::before,
+ .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8:not(.acronym__6e9f8)::before {
     content: '';
     display: block;
     position: absolute;
